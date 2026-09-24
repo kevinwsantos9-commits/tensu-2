@@ -16,7 +16,7 @@ public final class Network {
     public static void init() {
         CHANNEL = ChannelBuilder.named(
                 ResourceLocation.fromNamespaceAndPath(Tensu.MODID, "main"))
-            .networkProtocolVersion(() -> PROTOCOL)
+            .networkProtocolVersion(PROTOCOL)
             .clientAcceptedVersions(PROTOCOL::equals)
             .serverAcceptedVersions(PROTOCOL::equals)
             .simpleChannel();
